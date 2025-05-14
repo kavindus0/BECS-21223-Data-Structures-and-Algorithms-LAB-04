@@ -8,7 +8,5 @@ public class Test {
         System.out.println("Max: "+functions.Max());
         System.out.println("Min: "+functions.Min());
         System.out.println("Count of Evens: "+functions.EvvenCount());
-
-
     }
 }
