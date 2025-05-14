@@ -2,32 +2,27 @@ package Question01.ArrayBased;
 
 public class List {
     private int maxSize;
-    private int position; // -1 indicates empty list
+    private int position;
     private int[] listEntry;
 
-    // Constructor
     public List(int size) {
         maxSize = size;
         listEntry = new int[maxSize];
         position = -1;
     }
 
-    // IsListEmpty
     boolean isListEmpty() {
         return position == -1;
     }
 
-    // IsListFull
     boolean isListFull() {
         return position == maxSize - 1;
     }
 
-    // ListSize
     int listSize() {
         return position + 1;
     }
 
-    // InsertLast
     void insertLast(int x) {
         if (isListFull())
             System.out.println("Attempt to insert at the end of a full list");
@@ -35,7 +30,6 @@ public class List {
             listEntry[++position] = x;
     }
 
-    // InsertList
     void insertList(int p, int element) {
         if (isListFull())
             System.out.println("Attempt to insert into a full list");
@@ -49,7 +43,6 @@ public class List {
         }
     }
 
-    // DeleteList
     int deleteList(int p) {
         int element;
         if (isListEmpty()) {
@@ -67,7 +60,6 @@ public class List {
         }
     }
 
-    // RetrieveList
     int retrieveList(int p) {
         if (isListEmpty()) {
             System.out.println("Attempt to retrieve from an empty list");
@@ -80,7 +72,6 @@ public class List {
         }
     }
 
-    // ReplaceList
     void replaceList(int p, int x) {
         if (isListEmpty()) {
             System.out.println("Attempt to replace in an empty list");
@@ -91,7 +82,6 @@ public class List {
         }
     }
 
-    // TraverseList
     void traverseList() {
         for (int i = 0; i <= position; i++)
             System.out.println(listEntry[i]);
